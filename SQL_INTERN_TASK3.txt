@@ -1,0 +1,47 @@
+SPOOL C:\Users\SHRAVANI\Documents\task3output.txt;
+
+SELECT * FROM (
+  SELECT * FROM Housing
+)
+WHERE ROWNUM <= 5;
+
+SELECT * FROM Housing
+WHERE price < 2000000;
+
+SELECT area, price
+FROM Housing
+WHERE price > 2000000;
+
+SELECT area, price
+FROM Housing
+WHERE price > 2000000
+  AND furnishingstatus = 'furnished';
+
+SELECT area, price
+FROM Housing
+WHERE furnishingstatus = 'furnished' OR furnishingstatus ='unfurnished'; 
+
+
+
+SELECT * FROM Housing 
+WHERE bedrooms BETWEEN 1 AND 3;
+
+SELECT * FROM Housing
+WHERE price BETWEEN 2000000 AND 2500000;
+
+
+SELECT * FROM Housing
+WHERE furnishingstatus LIKE 'f%';
+
+SELECT * FROM Housing
+WHERE mainroad LIKE 'y%';
+
+SELECT area, price,furnishingstatus
+FROM Housing
+ORDER BY price ASC;
+
+SELECT area, price,furnishingstatus
+FROM Housing
+ORDER BY price DESC;
+
+SPOOL OFF
